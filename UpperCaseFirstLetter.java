@@ -8,8 +8,9 @@ public class UpperCaseFirstLetter {
         for(int i=1;i<str.length();i++){
             if(str.charAt(i) == ' ' && i<str.length()-1){
                sb.append(str.charAt(i));
+               
+               sb.append(Character.toUpperCase(str.charAt(i+1)));
                i++;
-               sb.append(Character.toUpperCase(str.charAt(i)));
             }else{
                 sb.append(str.charAt(i));
             }
@@ -17,7 +18,7 @@ public class UpperCaseFirstLetter {
         return sb.toString();
     }
     public static void main(String args[]){
-      String str = "iam ruchitha along side with ammu. ";
+      String str = "iam going out ";
       System.out.println(UpperCase(str));
     }
 }
